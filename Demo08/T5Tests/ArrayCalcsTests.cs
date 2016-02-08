@@ -15,31 +15,48 @@ namespace T5.Tests
         public void SumTest()
         {
             // arrange
-            double[] array = new double[];
-            array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
+            double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
             double expected = 25.6;
             // act
-            double actual = array.Sum(array);
+            double actual = ArrayCalcs.Sum(array);
             // assert
-
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
         public void AverageTest()
         {
-            Assert.Fail();
+            // arrange
+            double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
+            double expected = 3.66;
+            // act
+            double actual = ArrayCalcs.Average(array);
+            // assert
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
         public void MinimumTest()
         {
-            Assert.Fail();
+            // arrange
+            double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
+            double expected = -4.5;
+            // act
+            double actual = ArrayCalcs.Minimum(array);
+            // assert
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
         public void MaximumTest()
         {
-            Assert.Fail();
+            // arrange
+            double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
+            double expected = 12.0;
+            // act
+            double actual = ArrayCalcs.Maximum(array);
+            // assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }
